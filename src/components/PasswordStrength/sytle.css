@@ -1,0 +1,21 @@
+.levels_container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.strength {
+    margin-right: auto;
+}
+
+.levels {
+    display: flex;
+    align-items: center;
+}
+
+.level {
+    height: 20px;
+    width: 10px;
+    border: 1px solid black;
+    margin-left: 5px;
+}

@@ -5,7 +5,7 @@ import './style.css'
 function CopyButton(props) {
 
     return ( 
-        <button>{props.password}</button>
+        <button onClick={props.copyValue}>{props.value}</button>
      );
 }   
 export default CopyButton;
