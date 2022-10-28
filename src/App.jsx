@@ -5,17 +5,16 @@ import Button from './components/Button/index'
 import PasswordStrength from './components/PasswordStrength/index'
 
 function App() {
-  const [text, setText] = useState('')
   const [amount, setAmount] = useState('10')
   const [password, setPassword] = useState('')
   const [level, setLevel] = useState(1)
 
   useEffect(() => {
-      if (amount < 5) {
+      if (amount <= 5) {
         setLevel(1)
-      } else if (amount < 10) {
+      } else if (amount <= 10) {
         setLevel(2)
-      } else if (amount < 15) {
+      } else if (amount <= 15) {
         setLevel(3)
       } else {
         setLevel(4)
@@ -23,8 +22,28 @@ function App() {
     }, [amount])
 
   function generatePassword() {
+    const upper = document.getElementById('upper')
+    const lower = document.getElementById('lower')
+    const number = document.getElementById('number')
+    const simbols = document.getElementById('simbols')
+
+    let values = ''
+
     let generatedPassword = ''
-    const values = 'ABCDEFGHIJKLMNOPQRSTUVWXYZefghijklmnopqrstuvwxyz0123456789!*_-@:;,.'
+    if (upper.checked) {
+      values += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    }
+    if (lower.checked) {
+      values += 'abcdefghijklmnopqrstuvwxyz'
+    }
+    if (number.checked) {
+      values += '0123456789'
+    }
+    if (simbols.checked) {
+      values += '!*_-@:;,.'
+    }
+    
+    // const values = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!*_-@:;,.'
 
     for (let i = 1; i <= amount; i++) {
       generatedPassword += values.charAt(Math.floor(Math.random() * values.length))
@@ -52,10 +71,10 @@ function App() {
           onChange={event => setAmount(event.target.value)} value={amount}/>
 
         <fieldset>
-          <label htmlFor="1"><input type="checkbox" name="1" id="" /> Incluir letras maiúsculas</label>
-          <label htmlFor="2"><input type="checkbox" name="2" id="" /> Incluir letras minúsculas</label>
-          <label htmlFor="3"><input type="checkbox" name="3" id="" /> Inclur números</label>
-          <label htmlFor="4"><input type="checkbox" name="4" id="" /> Incluir Símbolos</label>
+          <label htmlFor="upper"><input type="checkbox" name="option" id="upper" /> Incluir letras maiúsculas</label>
+          <label htmlFor="lower"><input type="checkbox" name="option" id="lower" /> Incluir letras minúsculas</label>
+          <label htmlFor="number"><input type="checkbox" name="option" id="number" /> Inclur números</label>
+          <label htmlFor="simbols"><input type="checkbox" name="option" id="simbols" /> Incluir Símbolos</label>
         </fieldset>
 
         <PasswordStrength 
