@@ -27,10 +27,10 @@ function PasswordStrength({level}) {
             <p className='strength'>Strength</p>
             <p>{strength}</p>
             <div className="levels">
-                <div className="level 1"></div>
-                <div className="level 2"></div>
-                <div className="level 3"></div>
-                <div className="level 4"></div>
+                <div className={`level ${level >= 1 ? 'active' : ''}`}></div>
+                <div className={`level ${level >= 2 ? 'active' : ''}`}></div>
+                <div className={`level ${level >= 3 ? 'active' : ''}`}></div>
+                <div className={`level ${level >= 4 ? 'active' : ''}`}></div>
             </div>
         </div>
      );
