@@ -1,0 +1,25 @@
+button {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #A5FFAF;
+    font-size: 1.1rem;
+    border: 2px solid #A5FFAF;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s;
+}
+
+button > img {
+    height: 8px;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: transparent;
+    color: #A5FFAF;
+}

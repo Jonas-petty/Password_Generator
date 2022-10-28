@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import CopyButton from './components/CopyButton/index'
+import Slider from './components/Slider/index';
 import Button from './components/Button/index'
 import PasswordStrength from './components/PasswordStrength/index'
 
@@ -66,22 +67,20 @@ function App() {
         <CopyButton value={password}
           copyValue={CopyValue}/>
 
-        <label className="range_title" htmlFor="characters">Quantidade de Caracteres <span className="amount">{amount}</span></label>
-        <input type="range" name="characters" id="characters" min="0" max="20"
-          onChange={event => setAmount(event.target.value)} value={amount}/>
+        <div className="options">
+          <Slider amount={amount} setAmount={setAmount}/>
 
-        <fieldset>
-          <label htmlFor="upper"><input type="checkbox" name="option" id="upper" /> Incluir letras maiúsculas</label>
-          <label htmlFor="lower"><input type="checkbox" name="option" id="lower" /> Incluir letras minúsculas</label>
-          <label htmlFor="number"><input type="checkbox" name="option" id="number" /> Inclur números</label>
-          <label htmlFor="simbols"><input type="checkbox" name="option" id="simbols" /> Incluir Símbolos</label>
-        </fieldset>
-
-        <PasswordStrength 
-          level={level}/>
-
-        <Button text={"Gerar"}
-          onClickFunction={generatePassword}/>
+          <fieldset>
+            <label htmlFor="upper"><input type="checkbox" name="option" id="upper" checked/> Incluir letras maiúsculas</label>
+            <label htmlFor="lower"><input type="checkbox" name="option" id="lower" checked/> Incluir letras minúsculas</label>
+            <label htmlFor="number"><input type="checkbox" name="option" id="number" /> Inclur números</label>
+            <label htmlFor="simbols"><input type="checkbox" name="option" id="simbols" /> Incluir Símbolos</label>
+          </fieldset>
+          <PasswordStrength
+            level={level}/>
+          <Button text={"Gerar"}
+            onClickFunction={generatePassword}/>
+        </div>
         
       </div>
     </div>

@@ -1,0 +1,22 @@
+.range {
+  cursor: pointer;
+  background: linear-gradient(to right, #A5FFAF 0%, #A5FFAF 50%, #111115 50%, #111115 100%);
+  height: 8px;
+  outline: none;
+  -webkit-appearance: none;
+  margin-bottom: 10px;
+}
+  
+  .range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    background-color: #E7E6EB;
+    border-radius: 50%;
+    transition: 0.2s;
+  }
+  
+  .range::-webkit-slider-thumb:hover {
+    background-color: #111115;
+    border: 2px solid #A5FFAF;
+  }

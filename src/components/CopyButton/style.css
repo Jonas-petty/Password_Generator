@@ -1,0 +1,21 @@
+.copy_button {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+
+    font-size: 1.2rem;
+    background-color: #24232A;
+    border: 1px solid #24232A;
+    color: #E7E6EB;
+}
+
+.copy_button > img {
+    height: 15px;
+}
+
+.copy_button:hover {
+    background-color: #2d2c34;
+}
