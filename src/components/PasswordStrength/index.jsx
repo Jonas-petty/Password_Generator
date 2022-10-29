@@ -24,7 +24,7 @@ function PasswordStrength({level}) {
 
     return ( 
         <div className='levels_container'>
-            <p className='strength'>Strength</p>
+            <p className='strength'>Força</p>
             <p>{strength}</p>
             <div className="levels">
                 <div className={`level ${level >= 1 ? 'active' : ''}`}></div>

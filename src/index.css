@@ -64,3 +64,42 @@ fieldset {
   display: flex;
   flex-direction: column;
 }
+
+label {
+  text-align: left;
+  align-items: center;
+}
+
+input[type=checkbox] {
+  text-align: center;
+  align-items: center;
+  -webkit-appearance:none;
+  height: 20px;
+  width:20px;
+  cursor:pointer;
+  background-color: transparent;
+  border: 2px solid #E7E6EB;
+  margin-top: 10px;
+}
+
+input[type=checkbox]:hover {
+  border: 2px solid #A5FFAF;
+}
+
+input[type=checkbox]:checked {
+  height: 20px;
+  width:20px;
+  background-color: #A5FFAF;
+  border: 2px solid #A5FFAF;
+  margin-top: 10px;
+}
+
+input[type=checkbox]::before {
+  content: '✔';
+  color: transparent;
+}
+
+input[type=checkbox]:checked::before {
+  content: '✔';
+  color: black;
+}

@@ -71,8 +71,8 @@ function App() {
           <Slider amount={amount} setAmount={setAmount}/>
 
           <fieldset>
-            <label htmlFor="upper"><input type="checkbox" name="option" id="upper" checked/> Incluir letras maiúsculas</label>
-            <label htmlFor="lower"><input type="checkbox" name="option" id="lower" checked/> Incluir letras minúsculas</label>
+            <label htmlFor="upper"><input type="checkbox" name="option" id="upper" defaultChecked /> Incluir letras maiúsculas</label>
+            <label htmlFor="lower"><input type="checkbox" name="option" id="lower" defaultChecked /> Incluir letras minúsculas</label>
             <label htmlFor="number"><input type="checkbox" name="option" id="number" /> Inclur números</label>
             <label htmlFor="simbols"><input type="checkbox" name="option" id="simbols" /> Incluir Símbolos</label>
           </fieldset>

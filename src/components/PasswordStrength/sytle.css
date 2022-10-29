@@ -1,11 +1,14 @@
-.levels_container {
-    padding: 10px;
+.levels_container { 
+    background-color: #111115;
+    padding: 15px;
     display: flex;
     align-items: center;
+    margin: 20px 0;
 }
 
 .strength {
     margin-right: auto;
+    text-transform: uppercase;
 }
 
 .levels {
@@ -16,10 +19,11 @@
 .level {
     height: 20px;
     width: 10px;
-    border: 1px solid black;
+    border: 1px solid #E7E6EB;
     margin-left: 5px;
 }
 
 .level.active {
-    background-color: red;
+    background-color: #F9CF64;
+    border: 1px solid #F9CF64;
 }
