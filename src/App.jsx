@@ -7,7 +7,7 @@ import PasswordStrength from './components/PasswordStrength/index'
 
 function App() {
   const [amount, setAmount] = useState('10')
-  const [password, setPassword] = useState('')
+  const [password, setPassword] = useState('**********')
   const [level, setLevel] = useState(1)
 
   useEffect(() => {
